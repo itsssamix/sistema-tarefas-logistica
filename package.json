@@ -1,0 +1,16 @@
+{
+  "name": "sistema-tarefas-logistica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testMatch": ["**/tests/**/*.test.js"],
+    "verbose": true
+  },
+  "devDependencies": {
+    "jest": "^30.0.5"
+  }
+}
