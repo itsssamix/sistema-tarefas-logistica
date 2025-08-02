@@ -11,7 +11,6 @@ document.getElementById('form-tarefa').addEventListener('submit', function(e) {
         <span>${inputTarefa.value}</span>
         <button class="excluir">Excluir</button>
     `;
-
     listaTarefas.appendChild(li);
     inputTarefa.value = '';
 
@@ -20,6 +19,9 @@ document.getElementById('form-tarefa').addEventListener('submit', function(e) {
         li.remove();
     });
 });
+
+// Função para carregar tarefas salvas
+let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
 function carregarTarefas() {
     const lista = document.getElementById('lista-tarefas');
