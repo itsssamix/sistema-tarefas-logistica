@@ -29,3 +29,9 @@ jobs:
 
     - name: Rodar testes
       run: npm test
+
+    - name: Mostrar estrutura de diretórios
+  run: |
+    pwd
+    ls -la
+    ls -la sistema-tarefas-logistica || echo "Pasta sistema-tarefas-logistica não existe"
