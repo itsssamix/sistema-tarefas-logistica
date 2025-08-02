@@ -20,3 +20,17 @@ document.getElementById('form-tarefa').addEventListener('submit', function(e) {
         li.remove();
     });
 });
+
+function carregarTarefas() {
+    const lista = document.getElementById('lista-tarefas');
+    lista.innerHTML = '';
+    tarefas.forEach(tarefa => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${tarefa}</span>
+            <button class="excluir">Excluir</button>
+        `;
+        lista.appendChild(li);
+    });
+}
+carregarTarefas();
