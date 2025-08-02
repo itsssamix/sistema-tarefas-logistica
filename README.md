@@ -1,78 +1,90 @@
-# Sistema de Tarefas - LogisMax
+📌 Sistema de Tarefas – Techflow Solutions
+🧾 Descrição do Projeto
+Este projeto consiste em um gerenciador de tarefas simples e funcional desenvolvido para a empresa fictícia Techflow Solutions. O objetivo é oferecer uma interface amigável para criação, visualização, priorização e exclusão de tarefas, com armazenamento local (via localStorage).
 
-Este é um gerenciador simples de tarefas desenvolvido com JavaScript puro (Vanilla JS). O sistema permite adicionar, priorizar e excluir tarefas, além de armazená-las localmente no navegador. Também conta com testes automatizados utilizando **Jest** e integração contínua via **GitHub Actions**.
+🎯 Objetivo e Escopo
+Objetivo: Criar uma aplicação web responsiva que permita gerenciar tarefas de forma eficiente, sem necessidade de backend.
 
----
+Escopo Inicial:
 
-## 🚀 Funcionalidades
+Adicionar tarefas.
 
-- ✅ Adicionar novas tarefas
-- 🌟 Priorizar tarefas com destaque visual
-- ❌ Excluir tarefas
-- 💾 Armazenamento local com `localStorage`
-- 🧪 Testes unitários com Jest
-- 🔁 CI com GitHub Actions (testes rodam automaticamente a cada push)
+Excluir tarefas.
 
----
+Armazenar tarefas no localStorage.
 
-## 🛠 Tecnologias Utilizadas
+Funcionalidades extras previstas:
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- [Jest](https://jestjs.io/) — Testes unitários
-- GitHub Actions — Integração contínua
+Marcar tarefas como prioritárias com ordenação automática.
 
----
+Validação de entrada mínima de texto.
 
-## 📁 Estrutura do Projeto
+🚀 Metodologia Adotada
+A metodologia utilizada para o desenvolvimento foi o Kanban, organizada por meio do recurso GitHub Projects.
 
-sistema-tarefas-logistica/
-├── index.html # Página principal
-├── script.js # Lógica da aplicação
-├── validação.js # Validação de tarefas (exportada para testes)
-├── tests/
-│ └── validation.test.js # Testes unitários
-├── package.json # Configurações do projeto Node.js e dependências
-└── .github/
-└── workflows/
-└── test.yml # Pipeline de testes automatizados
+As tarefas foram divididas nas colunas: To Do, In Progress, Done.
 
-yaml
-Copiar
-Editar
+Cada funcionalidade ou ajuste do projeto corresponde a uma task no quadro.
 
----
+Acompanhamento visual e controle de progresso realizados no próprio GitHub.
 
-## ▶️ Como Executar Localmente
+👉 Acesse o quadro Kanban do projeto (GitHub Projects)
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/sistema-tarefas-logistica.git
-cd sistema-tarefas-logistica
-Instale as dependências:
+🛠️ Instruções para Execução
+Clone o repositório:
 
 bash
 Copiar
 Editar
-npm install
-Execute os testes:
+git clone https://github.com/SEU_USUARIO/seu-repositorio.git
+Acesse a pasta do projeto:
 
 bash
 Copiar
 Editar
-npm test
-Abra o arquivo index.html no navegador para usar o gerenciador de tarefas.
+cd seu-repositorio
+Execute o sistema:
 
-✅ Testes Automatizados
-Este projeto inclui testes automatizados usando Jest. A função validarTarefa é testada para garantir que o texto da tarefa tenha pelo menos 3 caracteres.
+Basta abrir o arquivo index.html no navegador.
 
-Além disso, o repositório está integrado ao GitHub Actions, que executa os testes automaticamente a cada push ou pull request para a branch main.
+Não é necessário servidor ou instalação de dependências adicionais.
 
-📄 Licença
-Este projeto foi desenvolvido para fins acadêmicos. Sinta-se livre para utilizar como referência educacional.
+📝 Justificativa para Mudança no Escopo
+Data: 02/08/2025
+Mudança: Adição de funcionalidade de priorização de tarefas
+Motivo: Durante o uso do protótipo, identificou-se que tarefas importantes se perdiam visualmente entre as demais. Por isso, foi incluída uma opção para o usuário marcar tarefas como prioritárias, que são agora exibidas no topo da lista.
+Impacto:
 
-✍️ Autor
-Samir (ou seu nome completo aqui)
+Novo botão de priorização (⭐/🌟)
+
+Alterações na lógica de renderização (tarefas.sort(...))
+
+Estilização diferenciada para tarefas prioritárias
+
+Atualização do quadro Kanban com novas tasks relacionadas
+
+Ajustes na documentação
+
+📂 Estrutura de Arquivos
+bash
+Copiar
+Editar
+📁 projeto/
+├── index.html         # Interface principal do sistema
+├── style.css          # Estilo e layout da aplicação
+├── script.js          # Lógica de manipulação de tarefas
+├── validacao.js       # Validação de entrada (mínimo 3 caracteres)
+└── README.md          # Documentação do projeto
+👨‍💻 Tecnologias Utilizadas
+HTML5
+
+CSS3
+
+JavaScript (ES6)
+
+GitHub Projects (Kanban)
+
+LocalStorage
+
+
 👨‍💻 Projeto universitário — Engenharia de Software
