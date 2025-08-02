@@ -9,21 +9,23 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+
+    - name: Mostrar estrutura de diretórios
+      run: |
+        pwd
+        ls -la
+        ls -la sistema-tarefas-logistica || echo "Pasta sistema-tarefas-logistica não existe"
+
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-    
-    - name: Install dependencies
-      working-directory: sistema-tarefas-logistica
-      run: |
-        npm install
-        npm install jest --save-dev
-    
-    - name: Run tests
-      working-directory: sistema-tarefas-logistica
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Rodar testes
       run: npm test
