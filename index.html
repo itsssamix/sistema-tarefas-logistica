@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>📋 Gerenciador de Tarefas</h1>
-        
-        <!-- Formulário para adicionar tarefas -->
-        <form id="form-tarefa">
-            <input 
-                type="text" 
-                id="input-tarefa" 
-                placeholder="Digite uma tarefa..." 
+    <div class="task-manager">
+        <h1>Gerenciador de Tarefas - Techflow Solutions</h1>
+
+        <form id="form-tarefa" class="task-form">
+            <input
+                type="text"
+                id="input-tarefa"
+                placeholder="Digite uma tarefa..."
+                class="task-input"
+                aria-label="Campo para digitar tarefas"
                 required
             >
-            <button type="submit">Adicionar</button>
+            <button type="submit" class="add-button">
+                Adicionar
+            </button>
         </form>
 
-        <!-- Lista de tarefas -->
-        <ul id="lista-tarefas"></ul>
+        <ul id="lista-tarefas" class="task-list"></ul>
     </div>
 
-    <!-- Script (opcional - vamos adicionar interatividade depois) -->
     <script src="script.js"></script>
 </body>
 </html>
