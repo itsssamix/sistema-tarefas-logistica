@@ -1,6 +1,6 @@
 name: Testes Automatizados
 
-on: # Configuração CORRETA dos triggers
+on:
   push:
     branches: [ main ]
   pull_request:
@@ -19,9 +19,11 @@ jobs:
         node-version: '18'
     
     - name: Install dependencies
+      working-directory: ./sistema-tarefas-logistica
       run: |
         npm install
         npm install jest --save-dev
     
     - name: Run tests
+      working-directory: ./sistema-tarefas-logistica
       run: npm test
