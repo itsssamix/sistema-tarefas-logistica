@@ -13,14 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Mostrar estrutura de diretórios na raiz
-      run: |
-        pwd
-        ls -la
-
-    - name: Mostrar estrutura de diretórios na pasta sistema-tarefas-logistica
-      run: |
-        ls -la sistema-tarefas-logistica
+    - name: Mostrar estrutura raiz
+      run: ls -la
 
     - name: Setup Node.js
       uses: actions/setup-node@v3
@@ -29,8 +23,6 @@ jobs:
 
     - name: Instalar dependências
       run: npm install
-      working-directory: sistema-tarefas-logistica
 
     - name: Rodar testes
       run: npm test
-      working-directory: sistema-tarefas-logistica
